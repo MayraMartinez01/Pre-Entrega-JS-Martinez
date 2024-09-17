@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Préstamos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Simulador de Préstamos</h1>
+    </header>
+    <div class="contenedor">
+        <form id="simulador">
+            <fieldset>
+                <legend>Datos del Préstamo</legend>
+                <label for="monto">Monto del Préstamo:</label>
+                <input type="number" id="monto" name="monto" required>
+                <small>Ejemplo: 5000</small>
+                
+                <label for="cuotas">Número de Cuotas:</label>
+                <input type="number" id="cuotas" name="cuotas" required>
+                <small>Ejemplo: 12</small>
+                
+                <label for="interes">Tasa de Interés Anual (%):</label>
+                <input type="number" id="interes" name="interes" step="0.01" required>
+                <small>Ejemplo: 5.5</small>
+                
+                <label for="moneda">Moneda:</label>
+                <select id="moneda" name="moneda">
+                    <option value="USD">Dólar (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="UYU">Peso Uruguayo (UYU)</option>
+                </select>
+                
+                <button type="submit">Calcular</button>
+                <button type="button" id="calcularCapacidadPago">Calcular Capacidad de Pago</button>
+                
+                <fieldset id="capacidadPagoFieldset">
+                    <legend>Ingreso Mensual</legend>
+                    <label for="ingreso">Ingreso Mensual:</label>
+                    <input type="number" id="ingreso" name="ingreso" required>
+                    <small>Ejemplo: 2000</small>
+                </fieldset>
+            </fieldset>
+        </form>
+        
+        <div id="resultado"></div>
+        <div id="resultadoPlazos"></div>
+        <div id="resultadoCapacidadPago"></div>
+    </div>
+
+    <script src="js/miarchivo.js"></script>
+</body>
+</html>
