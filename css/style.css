@@ -11,32 +11,32 @@ header {
     background-color: #007bff;
     color: white;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 
 .contenedor {
     background-color: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Aumentar el padding */
+    border-radius: 16px; /* Bordes más redondeados */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
     width: 90%;
-    max-width: 700px;
+    max-width: 800px; /* Aumentar el ancho máximo */
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px; /* Aumentar el margen superior */
 }
 
 h1 {
     color: #ffffff;
-    font-size: 28px;
+    font-size: 32px; /* Aumentar el tamaño de la fuente */
     margin: 0;
 }
 
 form {
     background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Bordes más redondeados */
+    padding: 30px; /* Aumentar el padding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 fieldset {
@@ -46,39 +46,39 @@ fieldset {
 }
 
 legend {
-    font-size: 20px;
+    font-size: 24px; /* Aumentar el tamaño de la fuente */
     font-weight: bold;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
-    font-size: 16px;
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
     color: #666;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 input, select {
-    padding: 12px;
-    width: calc(100% - 24px);
-    margin-bottom: 20px;
+    padding: 15px; /* Aumentar el padding */
+    width: calc(100% - 30px); /* Ajustar el ancho */
+    margin-bottom: 25px; /* Aumentar el margen */
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 8px; /* Bordes más redondeados */
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
 }
 
 button {
     background-color: #007bff;
     color: white;
-    padding: 12px 20px;
+    padding: 15px 25px; /* Aumentar el padding */
     border: none;
-    border-radius: 6px;
+    border-radius: 8px; /* Bordes más redondeados */
     cursor: pointer;
-    font-size: 16px;
-    width: calc(50% - 12px);
-    margin: 10px;
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
+    width: calc(50% - 15px);
+    margin: 12px; /* Aumentar el margen */
     transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -88,8 +88,8 @@ button:hover {
 }
 
 #resultado, #resultadoPago, #amortizacion {
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 20px; /* Aumentar el tamaño de la fuente */
+    margin-top: 25px; /* Aumentar el margen superior */
     color: #333;
     text-align: left;
 }
@@ -97,24 +97,24 @@ button:hover {
 small {
     display: block;
     margin-top: -10px;
-    margin-bottom: 20px;
-    font-size: 14px;
+    margin-bottom: 25px; /* Aumentar el margen inferior */
+    font-size: 16px; /* Aumentar el tamaño de la fuente */
     color: #777;
 }
 
 @media (max-width: 768px) {
     button {
         width: 100%;
-        margin: 10px 0;
+        margin: 12px 0;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 20px;
+        font-size: 24px; /* Aumentar el tamaño en pantallas pequeñas */
     }
 
     input, select {
-        padding: 10px;
+        padding: 12px; /* Ajustar el padding */
     }
 }
