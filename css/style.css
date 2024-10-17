@@ -1,84 +1,48 @@
+/* Estilos generales */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f4f8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
+    padding: 20px;
 }
 
-header {
-    background-color: #007bff;
-    color: white;
-    width: 100%;
-    padding: 30px;
-    text-align: center;
-}
-
-.contenedor {
-    background-color: #ffffff;
-    padding: 40px; /* Aumentar el padding */
-    border-radius: 16px; /* Bordes más redondeados */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
-    width: 90%;
-    max-width: 800px; /* Aumentar el ancho máximo */
-    text-align: center;
-    margin-top: 30px; /* Aumentar el margen superior */
-}
-
-h1 {
-    color: #ffffff;
-    font-size: 32px; /* Aumentar el tamaño de la fuente */
-    margin: 0;
-}
-
-form {
-    background-color: #f9f9f9;
-    border-radius: 12px; /* Bordes más redondeados */
-    padding: 30px; /* Aumentar el padding */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-legend {
-    font-size: 24px; /* Aumentar el tamaño de la fuente */
-    font-weight: bold;
+h1, h2 {
     color: #333;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     margin-bottom: 20px;
 }
 
 label {
-    font-size: 18px; /* Aumentar el tamaño de la fuente */
-    color: #666;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-input, select {
-    padding: 15px; /* Aumentar el padding */
-    width: calc(100% - 30px); /* Ajustar el ancho */
-    margin-bottom: 25px; /* Aumentar el margen */
+input[type="number"], input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Bordes más redondeados */
+    border-radius: 4px;
     box-sizing: border-box;
-    font-size: 18px; /* Aumentar el tamaño de la fuente */
 }
 
 button {
     background-color: #007bff;
     color: white;
-    padding: 15px 25px; /* Aumentar el padding */
     border: none;
-    border-radius: 8px; /* Bordes más redondeados */
+    padding: 10px 15px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 18px; /* Aumentar el tamaño de la fuente */
     width: calc(50% - 15px);
-    margin: 12px; /* Aumentar el margen */
+    margin: 12px;
     transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -87,21 +51,58 @@ button:hover {
     transform: scale(1.05);
 }
 
-#resultado, #resultadoPago, #amortizacion {
-    font-size: 20px; /* Aumentar el tamaño de la fuente */
-    margin-top: 25px; /* Aumentar el margen superior */
-    color: #333;
+/* Estilo de los resultados generales */
+#resultado, #resultadoPlazos, #resultadoCapacidadPago {
+    font-size: 1.2em;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e7f3fe; /* Fondo azul claro */
+    border: 1px solid #b3d7ff; /* Borde azul */
+    border-radius: 6px;
+    color: #31708f; /* Texto azul oscuro */
     text-align: left;
 }
 
-small {
-    display: block;
-    margin-top: -10px;
-    margin-bottom: 25px; /* Aumentar el margen inferior */
-    font-size: 16px; /* Aumentar el tamaño de la fuente */
-    color: #777;
+/* Resultados de capacidad de pago con colores diferenciados */
+#resultadoCapacidadPago.exito {
+    background-color: #d4edda; /* Fondo verde claro */
+    border-color: #c3e6cb; /* Borde verde */
+    color: #155724; /* Texto verde oscuro */
 }
 
+#resultadoCapacidadPago.error {
+    background-color: #f8d7da; /* Fondo rojo claro */
+    border-color: #f5c6cb; /* Borde rojo */
+    color: #721c24; /* Texto rojo oscuro */
+}
+
+/* Estilo de la tabla de amortización */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff; /* Fondo azul oscuro para encabezados */
+    color: white; /* Texto blanco en encabezados */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fondo para filas pares */
+}
+
+tbody tr:hover {
+    background-color: #d1e7fd; /* Fondo al pasar el mouse */
+}
+
+/* Estilo responsive */
 @media (max-width: 768px) {
     button {
         width: 100%;
@@ -111,7 +112,7 @@ small {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 24px; /* Aumentar el tamaño en pantallas pequeñas */
+        font-size: 24px; /* Tamaño de texto ajustado para pantallas pequeñas */
     }
 
     input, select {

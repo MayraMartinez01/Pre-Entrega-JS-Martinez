@@ -2,45 +2,64 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Préstamos</title>
-    <!-- Vincular el archivo CSS -->
+    <meta name="description" content="Simulador de préstamos para calcular tus cuotas mensuales y determinar tu capacidad de pago.">
+    <meta name="keywords" content="préstamos, simulador, cuotas, capacidad de pago, interés">
+    <meta name="author" content="Tu Nombre">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Cabecera con el título de la página -->
+    <header>
+        <h1>Simulador de Préstamos</h1>
+        <p>Calcula el valor de tus cuotas y verifica si puedes afrontar el pago.</p>
+    </header>
 
-<h1>Simulador de Préstamos</h1>
+    <!-- Sección principal del formulario -->
+    <main>
+        <section>
+            <h2>Datos del Préstamo</h2>
+            <form id="simulador">
+                <label for="monto">Monto del préstamo:</label>
+                <input type="number" id="monto" name="monto" required>
 
-<form id="simulador">
-    <label for="monto">Monto del préstamo:</label>
-    <input type="number" id="monto" placeholder="Ingrese el monto" required>
+                <label for="cuotas">Número de cuotas:</label>
+                <input type="number" id="cuotas" name="cuotas" required>
 
-    <label for="cuotas">Número de cuotas:</label>
-    <input type="number" id="cuotas" placeholder="Ingrese el número de cuotas" required>
+                <label for="interes">Tasa de interés (% anual):</label>
+                <input type="number" id="interes" name="interes" required>
 
-    <label for="interes">Tasa de interés (anual):</label>
-    <input type="number" id="interes" placeholder="Ingrese la tasa de interés" required>
+                <button type="submit">Calcular Cuota</button>
+            </form>
 
-    <label for="ingreso">Ingreso mensual:</label>
-    <input type="number" id="ingreso" placeholder="Ingrese su ingreso mensual" required>
+            <div id="resultado"></div> <!-- Mostrar resultado de la cuota mensual -->
+        </section>
 
-    <label for="moneda">Seleccione la moneda:</label>
-    <select id="moneda">
-        <option value="UYU">Pesos Uruguayos (UYU)</option>
-        <option value="USD">Dólares (USD)</option>
-        <option value="EUR">Euros (EUR)</option>
-    </select>
+        <section>
+            <h2>Capacidad de Pago</h2>
+            <form>
+                <label for="ingreso">Ingreso mensual:</label>
+                <input type="number" id="ingreso" name="ingreso" required>
 
-    <button type="submit">Calcular</button>
-</form>
+                <button type="button" id="calcularCapacidadPago">Calcular Capacidad de Pago</button>
+            </form>
 
-<div class="resultado" id="resultado"></div>
-<div class="resultado" id="resultadoPlazos"></div>
-<div class="resultado" id="resultadoCapacidadPago"></div>
+            <div id="resultadoCapacidadPago"></div> <!-- Mostrar resultado de capacidad de pago -->
+        </section>
 
-<button id="calcularCapacidadPago">Calcular Capacidad de Pago</button>
+        <section>
+            <h2>Tabla de Amortización</h2>
+            <div id="resultadoPlazos"></div> <!-- Mostrar tabla de amortización -->
+        </section>
+    </main>
 
-<!-- Vincular el archivo JavaScript -->
-<script src="js/miarchivo.js"></script>
+    <!-- Pie de página con información adicional -->
+    <footer>
+        <p>&copy; 2024 Simulador de Préstamos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/miarchivo.js"></script>
 </body>
 </html>
