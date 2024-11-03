@@ -1,0 +1,16 @@
+main {
+    padding: 20px;
+
+    section {
+        margin-bottom: 20px;
+        
+        h2 {
+            color: $section-title-color;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    }
+}
+

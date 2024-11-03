@@ -1,0 +1,68 @@
+// Importar colores y tipografías
+@import '../variables/colors';
+@import '../variables/fonts';
+@import '../variables/typography';
+
+// Estilos generales
+body {
+    font-family: $font-family-base;
+    background-color: $background-color;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: $text-color;
+}
+
+form {
+    background-color: #fff; // Cambiar a una variable si lo deseas
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: $font-weight-bold;
+}
+
+input[type="number"], input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; // Puedes convertir esto en una variable
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: calc(50% - 15px);
+    margin: 12px;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+        transform: scale(1.05);
+    }
+}
+
+// Estilo de los resultados generales
+#resultado, #resultadoPlazos, #resultadoCapacidadPago {
+    font-size: 1.2em;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e7f3fe; // Fondo azul claro
+    border: 1px solid #b3d7ff; // Borde azul
+    border-radius: 6px;
+    color: #31708f; // Texto azul oscuro
+    text-align: left;
+}

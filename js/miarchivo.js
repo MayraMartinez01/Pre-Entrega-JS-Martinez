@@ -66,8 +66,9 @@ formulario.addEventListener('submit', function(e) {
     const cuotas = parseInt(document.getElementById('cuotas').value);
     const interes = parseFloat(document.getElementById('interes').value);
 
-    if (isNaN(monto) || isNaN(cuotas) || isNaN(interes)) {
-        resultado.textContent = 'Por favor, complete todos los campos correctamente.';
+    // Validación de entradas
+    if (isNaN(monto) || isNaN(cuotas) || isNaN(interes) || monto < 0 || cuotas <= 0 || interes < 0) {
+        resultado.textContent = 'Por favor, ingrese valores válidos (no negativos).';
         return;
     }
 
@@ -87,8 +88,9 @@ botonCapacidadPago.addEventListener('click', function() {
     const interes = parseFloat(document.getElementById('interes').value);
     const ingreso = parseFloat(document.getElementById('ingreso').value);
 
-    if (isNaN(monto) || isNaN(cuotas) || isNaN(interes) || isNaN(ingreso)) {
-        resultadoCapacidadPago.textContent = 'Por favor, complete todos los campos correctamente.';
+    // Validación de entradas
+    if (isNaN(monto) || isNaN(cuotas) || isNaN(interes) || isNaN(ingreso) || monto < 0 || cuotas <= 0 || interes < 0 || ingreso < 0) {
+        resultadoCapacidadPago.textContent = 'Por favor, ingrese valores válidos (no negativos).';
         return;
     }
 

@@ -1,0 +1,17 @@
+// Media Queries para responsividad
+@media (max-width: 768px) {
+    button {
+        width: 100%;
+        margin: 12px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: $font-size-medium; // Tamaño de texto ajustado para pantallas pequeñas
+    }
+
+    input, select {
+        padding: 12px; // Ajustar el padding
+    }
+}
